@@ -1,2 +1,2 @@
 # bil212
-Data Structure and Algorithms
+Data Structure @TOBB_ETU
