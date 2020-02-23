@@ -21,7 +21,7 @@ public abstract class AbstractBinaryTree<E> extends AbstractTree<E>
    * @return the Position of the sibling (or null if no sibling exists)
    * @throws IllegalArgumentException if p is not a valid Position for this tree
    */
-  //@Override
+  @Override
   public Position<E> sibling(Position<E> p) {
     Position<E> parent = parent(p);
     if (parent == null) return null;                  // p must be the root
@@ -38,7 +38,7 @@ public abstract class AbstractBinaryTree<E> extends AbstractTree<E>
    * @return number of children of Position p
    * @throws IllegalArgumentException if p is not a valid Position for this tree.
    */
-  //@Override
+  @Override
   public int numChildren(Position<E> p) {
     int count=0;
     if (left(p) != null)
@@ -55,7 +55,7 @@ public abstract class AbstractBinaryTree<E> extends AbstractTree<E>
    * @return iterable collection of the Positions of p's children
    * @throws IllegalArgumentException if p is not a valid Position for this tree.
    */
-  //@Override
+  @Override
   public Iterable<Position<E>> children(Position<E> p) {
     List<Position<E>> snapshot = new ArrayList<>(2);    // max capacity of 2
     if (left(p) != null)
@@ -94,7 +94,7 @@ public abstract class AbstractBinaryTree<E> extends AbstractTree<E>
    * Returns an iterable collection of the positions of the tree using inorder traversal
    * @return iterable collection of the tree's positions using inorder traversal
    */
-  //@Override
+  @Override
   public Iterable<Position<E>> positions() {
     return inorder();
   }
